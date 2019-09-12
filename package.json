@@ -1,0 +1,108 @@
+{
+  "name": "semantic-release-whmcs",
+  "version": "0.0.0-development",
+  "description": "`semantic-release` plugin for auto-publishing on WHMCS marketplace",
+  "main": "index.js",
+  "repository": "https://github.com/hexonet/semantic-release-whmcs",
+  "author": "Kai Schwarz <kschwarz@hexonet.net>",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/hexonet/semantic-release-whmcs/issues"
+  },
+  "contributors": [
+    "Kai Schwarz <kschwarz@hexonet.net> (https://www.hexonet.net)"
+  ],
+  "engines": {
+    "node": ">=8.3"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "keywords": [
+    "whmcs",
+    "marketplace",
+    "hexonet",
+    "publish",
+    "release",
+    "semantic-release",
+    "version"
+  ],
+  "nyc": {
+    "include": [
+      "lib/**/*.js"
+    ],
+    "reporter": [
+      "json",
+      "text",
+      "html"
+    ],
+    "all": true
+  },
+  "homepage": "https://github.com/hexonet/semantic-release-whmcs#readme",
+  "dependencies": {
+    "@semantic-release/error": "^2.2.0",
+    "aggregate-error": "^3.0.0",
+    "sinon": "^7.1.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/exec": "^3.3.5",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.4.2",
+    "@semantic-release/npm": "^5.1.15",
+    "ava": "^2.3.0",
+    "debug": "^4.1.1",
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nyc": "^14.1.1",
+    "puppeteer": "1.19.0",
+    "semantic-release": "^15.13.24"
+  },
+  "scripts": {
+    "test": "nyc ava -v",
+    "lint": "eslint --fix --config=./.eslintrc.js *.js lib/*.js lib/definitions/*.js README.md *.json test/*.test.js",
+    "semantic-release": "semantic-release"
+  },
+  "release": {
+    "debug": false,
+    "analyzeCommits": {
+      "preset": "angular"
+    },
+    "generateNotes": {
+      "preset": "angular"
+    },
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      {
+        "path": "@semantic-release/changelog",
+        "changelogFile": "HISTORY.md"
+      },
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "HISTORY.md",
+          "package.json"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "publish": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
+}
