@@ -23,7 +23,7 @@ test.serial('Verify publishing [login fails]', async t => {
     }
   }
   const result = await publish({}, context)
-  t.is(result.success, false)
+  t.is(result, false)
 })
 
 test.serial('Verify publishing [no product id]', async t => {
@@ -42,7 +42,7 @@ test.serial('Verify publishing [no product id]', async t => {
     }
   }
   const result = await publish({}, context)
-  t.is(result.success, false)
+  t.is(result, false)
 })
 
 test.skip('Verify publishing [all fine]', async t => {
