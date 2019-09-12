@@ -1,7 +1,7 @@
-# @hexonet/semantic-release-whmcs
+# semantic-release-whmcs
 
-[![npm version](https://img.shields.io/npm/v/@hexonet/semantic-release-whmcs.svg?style=flat)](https://www.npmjs.com/package/@hexonet/semantic-release-whmcs)
-[![node](https://img.shields.io/node/v/@hexonet/semantic-release-whmcs.svg)](https://www.npmjs.com/package/@hexonet/semantic-release-whmcs)
+[![npm version](https://img.shields.io/npm/v/semantic-release-whmcs.svg?style=flat)](https://www.npmjs.com/package/semantic-release-whmcs)
+[![node](https://img.shields.io/node/v/semantic-release-whmcs.svg)](https://www.npmjs.com/package/semantic-release-whmcs)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![build](https://travis-ci.org/hexonet/semantic-release-whmcs.svg?branch=master)](https://travis-ci.org/hexonet/semantic-release-whmcs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -30,7 +30,7 @@
 ### Install
 
 ```bash
-> npm i @hexonet/semantic-release-whmcs -D
+> npm i semantic-release-whmcs -D
 ```
 
 ### Configuration
@@ -42,7 +42,7 @@ The plugin can be loaded in the [**semantic-release** configuration file](https:
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@hexonet/semantic-release-whmcs"
+    "semantic-release-whmcs"
   ]
 }
 ```
