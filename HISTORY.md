@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.2...v1.0.3) (2019-09-12)
+
+
+### Bug Fixes
+
+* **publish:** review step to return false in error case ([360f787](https://github.com/hexonet/semantic-release-whmcs/commit/360f787))
+
 ## [1.0.2](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.1...v1.0.2) (2019-09-12)
 
 
