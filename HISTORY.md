@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.3...v1.0.4) (2019-09-13)
+
+
+### Bug Fixes
+
+* **publish:** fix version number, review return value ([9bfe9ad](https://github.com/hexonet/semantic-release-whmcs/commit/9bfe9ad))
+
 ## [1.0.3](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.2...v1.0.3) (2019-09-12)
 
 

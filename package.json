@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-whmcs",
-  "version": "0.0.0-development",
+  "version": "1.0.4",
   "description": "`semantic-release` plugin for auto-publishing on WHMCS marketplace",
   "main": "index.js",
   "repository": "https://github.com/hexonet/semantic-release-whmcs",
