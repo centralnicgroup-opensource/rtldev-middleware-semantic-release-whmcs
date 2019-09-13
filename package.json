@@ -91,6 +91,7 @@
         "path": "@semantic-release/changelog",
         "changelogFile": "HISTORY.md"
       },
+      "@semantic-release/npm",
       {
         "path": "@semantic-release/git",
         "assets": [
