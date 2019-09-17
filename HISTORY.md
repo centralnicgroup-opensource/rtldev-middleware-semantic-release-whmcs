@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.7...v1.0.8) (2019-09-17)
+
+
+### Bug Fixes
+
+* **npm:** remove dependencies already included in semantic-release itself ([e0d5735](https://github.com/hexonet/semantic-release-whmcs/commit/e0d5735))
+
 ## [1.0.7](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.6...v1.0.7) (2019-09-17)
 
 
