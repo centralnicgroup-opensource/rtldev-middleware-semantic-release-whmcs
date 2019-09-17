@@ -1,6 +1,6 @@
 {
   "name": "@hexonet/semantic-release-whmcs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "`semantic-release` plugin for auto-publishing on WHMCS marketplace",
   "main": "index.js",
   "repository": "https://github.com/hexonet/semantic-release-whmcs",

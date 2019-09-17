@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.4...v1.0.5) (2019-09-17)
+
+
+### Bug Fixes
+
+* **package name:** changed at the npm registry ([265f2c6](https://github.com/hexonet/semantic-release-whmcs/commit/265f2c6))
+
 ## [1.0.4](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.3...v1.0.4) (2019-09-13)
 
 
