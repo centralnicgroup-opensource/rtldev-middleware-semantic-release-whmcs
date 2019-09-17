@@ -51,11 +51,8 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/commit-analyzer": "^6.2.0",
     "@semantic-release/exec": "^3.3.5",
     "@semantic-release/git": "^7.0.16",
-    "@semantic-release/github": "^5.4.2",
-    "@semantic-release/npm": "^5.1.15",
     "ava": "^2.3.0",
     "debug": "^4.1.1",
     "eslint": "^6.3.0",
