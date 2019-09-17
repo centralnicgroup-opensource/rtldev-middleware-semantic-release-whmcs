@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.5...v1.0.6) (2019-09-17)
+
+
+### Bug Fixes
+
+* **package.json:** configure publishConfig ([bbb71d3](https://github.com/hexonet/semantic-release-whmcs/commit/bbb71d3))
+* **release process:** review semantic-release configuration ([d03ff7c](https://github.com/hexonet/semantic-release-whmcs/commit/d03ff7c))
+
 ## [1.0.5](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.4...v1.0.5) (2019-09-17)
 
 
