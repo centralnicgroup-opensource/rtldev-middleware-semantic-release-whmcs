@@ -3,6 +3,9 @@
   "description": "`semantic-release` plugin for auto-publishing on WHMCS marketplace",
   "version": "1.0.5",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "Kai Schwarz",
     "email": "kschwarz@hexonet.net"
