@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.6...v1.0.7) (2019-09-17)
+
+
+### Bug Fixes
+
+* **publish:** use nextRelease.version instead of nextRelease.gitTag ([c14b843](https://github.com/hexonet/semantic-release-whmcs/commit/c14b843))
+
 ## [1.0.6](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.5...v1.0.6) (2019-09-17)
 
 
