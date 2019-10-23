@@ -5,9 +5,8 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": 2017
     },
-    'extends': 'standard',
+    'extends': ['standard', 'plugin:json/recommended'],
     'plugins': [
-        'markdown',
-        'json'
+        'markdown'
     ]
 }
