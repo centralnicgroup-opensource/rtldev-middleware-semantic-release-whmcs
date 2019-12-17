@@ -50,6 +50,7 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
+    "npm": ">=6.13.4",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/exec": "^3.3.5",
     "@semantic-release/git": "^7.0.16",
@@ -67,6 +68,7 @@
     "semantic-release": "^15.13.24"
   },
   "dependencies": {
+    "npm": ">=6.13.4",
     "@semantic-release/error": "^2.2.0",
     "aggregate-error": "^3.0.0",
     "sinon": "^7.1.1",
