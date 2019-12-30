@@ -71,7 +71,7 @@
     "npm": ">=6.13.4",
     "@semantic-release/error": "^2.2.0",
     "aggregate-error": "^3.0.0",
-    "sinon": "^7.1.1",
+    "sinon": "^8.0.1",
     "puppeteer": "^2.0.0"
   }
 }
