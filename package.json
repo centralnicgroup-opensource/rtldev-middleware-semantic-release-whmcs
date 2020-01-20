@@ -44,6 +44,11 @@
     ],
     "all": true
   },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
   "scripts": {
     "test": "nyc ava -v",
     "lint": "eslint --fix --config=./.eslintrc.js *.js lib/*.js lib/definitions/*.js README.md *.json test/*.test.js",
@@ -54,6 +59,7 @@
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/exec": "^3.3.5",
     "@semantic-release/git": "^7.0.16",
+    "esm": "^3.2.25",
     "ava": "^3.0.0",
     "debug": "^4.1.1",
     "eslint": "^6.3.0",
