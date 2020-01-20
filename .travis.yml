@@ -7,10 +7,11 @@ notifications:
     on_success: never
     on_failure: always
 node_js:
-  - "13"
   - "12"
   - "10"
 # AVA 3.0.0: We now support Node.js 10, 12 and 13. The minimal versions are 10.18.0, 12.14.0 and 13.5.0 respectively.
+# and https://github.com/avajs/ava/blob/master/docs/support-statement.md
+
 # Trigger a push build on master and dependabot branches + PRs build on every branches
 # Avoid double build on PRs (See https://github.com/travis-ci/travis-ci/issues/1147)
 branches:
