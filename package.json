@@ -13,7 +13,7 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": ">=8.3"
+    "node": ">=10.18.0"
   },
   "homepage": "https://github.com/hexonet/semantic-release-whmcs#readme",
   "repository": "github:hexonet/semantic-release-whmcs",
