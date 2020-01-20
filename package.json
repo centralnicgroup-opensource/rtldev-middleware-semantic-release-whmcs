@@ -44,8 +44,13 @@
     ],
     "all": true
   },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
   "scripts": {
-    "test": "nyc ava -v",
+    "test": "nyc ava -v --timeout=2m",
     "lint": "eslint --fix --config=./.eslintrc.js *.js lib/*.js lib/definitions/*.js README.md *.json test/*.test.js",
     "semantic-release": "semantic-release"
   },
@@ -54,7 +59,8 @@
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/exec": "^3.3.5",
     "@semantic-release/git": "^7.0.16",
-    "ava": "^2.3.0",
+    "esm": "^3.2.25",
+    "ava": "^3.0.0",
     "debug": "^4.1.1",
     "eslint": "^6.3.0",
     "eslint-config-standard": "^14.1.0",
