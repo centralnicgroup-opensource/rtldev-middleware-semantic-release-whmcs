@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.8...v1.0.9) (2020-01-20)
+
+
+### Bug Fixes
+
+* **ava:** use of esm module to support es modules ([bb17269](https://github.com/hexonet/semantic-release-whmcs/commit/bb172697c466aabf948af05305feaf112a4ecbdc))
+
 ## [1.0.8](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.7...v1.0.8) (2019-09-17)
 
 
