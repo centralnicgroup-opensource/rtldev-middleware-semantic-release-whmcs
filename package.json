@@ -78,6 +78,6 @@
     "@semantic-release/error": "^2.2.0",
     "aggregate-error": "^3.0.0",
     "sinon": "^9.0.0",
-    "puppeteer": "^2.0.0"
+    "puppeteer": "^3.0.1"
   }
 }
