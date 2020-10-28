@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.10...v1.0.11) (2020-10-28)
+
+
+### Bug Fixes
+
+* **dep-bump:** upgrade dependencies and review package.json ([c984270](https://github.com/hexonet/semantic-release-whmcs/commit/c984270ac9618f9637f9f3517a58a8f99412a463))
+
 ## [1.0.10](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.9...v1.0.10) (2020-10-28)
 
 
