@@ -13,7 +13,8 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": ">=10.18.0"
+    "node": ">=10.18.0",
+    "npm": ">=6.14.8"
   },
   "homepage": "https://github.com/hexonet/semantic-release-whmcs#readme",
   "repository": "github:hexonet/semantic-release-whmcs",
@@ -55,12 +56,13 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^5.0.0",
+    "@octokit/core": "^3.2.0",
+    "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
     "ava": "^3.13.0",
     "debug": "^4.2.0",
-    "eslint": "^7.0.0",
+    "eslint": "^7.12.1",
     "eslint-config-standard": "^15.0.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-json": "^2.1.2",
@@ -69,15 +71,13 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.2",
     "esm": "^3.2.25",
-    "npm": ">=6.13.4",
     "nyc": "^15.1.0",
     "semantic-release": "^17.2.1"
   },
   "dependencies": {
-    "npm": ">=6.14.8",
     "@semantic-release/error": "^2.2.0",
     "aggregate-error": "^3.1.0",
-    "sinon": "^9.0.0",
-    "puppeteer": "^5.1.0"
+    "sinon": "^9.2.1",
+    "puppeteer": "^5.4.1"
   }
 }
