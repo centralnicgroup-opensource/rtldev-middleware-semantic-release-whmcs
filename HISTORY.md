@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.11...v2.0.0) (2021-01-13)
+
+
+### Features
+
+* **adding new version:** automation fixed. tests reviewed/fixed. performance highly improved ([4b75872](https://github.com/hexonet/semantic-release-whmcs/commit/4b75872fa0c7df7185375fceabb5fc9ee238111f))
+
+
+### BREAKING CHANGES
+
+* **adding new version:** markdown links are automatically stripped.
+
 ## [1.0.11](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.10...v1.0.11) (2020-10-28)
 
 
