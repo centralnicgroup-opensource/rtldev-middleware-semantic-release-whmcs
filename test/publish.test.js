@@ -18,7 +18,7 @@ test.serial('Verify publishing [login fails]', async t => {
     },
     logger: t.context.logger,
     nextRelease: {
-      gitTag: 'v6.6.6',
+      version: 'v6.6.6',
       notes: '# something changed\n\ntwice.'
     }
   }
@@ -37,7 +37,7 @@ test.serial('Verify publishing [no product id]', async t => {
     env,
     logger: t.context.logger,
     nextRelease: {
-      gitTag: 'v6.6.6',
+      version: 'v6.6.6',
       notes: '# something changed\n\ntwice.'
     }
   }
@@ -54,10 +54,10 @@ test.skip('Verify publishing [all fine]', async t => {
     env,
     logger: t.context.logger,
     nextRelease: {
-      gitTag: 'v6.6.6',
-      notes: '# something changed\n\ntwice.'
+      version: 'v6.6.6',
+      notes: '# something changed\n\ntwice\n\n[link test](https://github.com/papakai) [link test2](https://github.com/papakai)\n\ndone.'
     }
   }
   const result = await publish({}, context)
-  t.is(result.success, true)
+  t.assert(result !== false)
 })

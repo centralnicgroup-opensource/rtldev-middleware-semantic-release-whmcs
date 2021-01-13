@@ -51,7 +51,8 @@
     ]
   },
   "scripts": {
-    "test": "nyc ava -v --timeout=2m",
+    "test": "nyc ava --verbose --timeout=2m",
+    "testnocoverage": "ava --verbose --timeout=2m",
     "lint": "eslint --fix --config=./.eslintrc.js *.js lib/*.js lib/definitions/*.js README.md *.json test/*.test.js",
     "semantic-release": "semantic-release"
   },
