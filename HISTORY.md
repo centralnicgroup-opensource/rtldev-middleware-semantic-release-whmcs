@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/hexonet/semantic-release-whmcs/compare/v2.0.0...v2.0.1) (2021-01-19)
+
+
+### Bug Fixes
+
+* **github actions:** add missing env vars ([efcac00](https://github.com/hexonet/semantic-release-whmcs/commit/efcac00abb76d8a89ed513036c5cd3396de7ddd7))
+* **github actions:** add missing env vars from secrets ([01b7543](https://github.com/hexonet/semantic-release-whmcs/commit/01b7543c6db00ec443d68dda6a50957f3924d667))
+* **github actions:** migrate from Travis CI ([0d579eb](https://github.com/hexonet/semantic-release-whmcs/commit/0d579eb9145b76f08cf0364bdce3a110a55fafb4))
+
 # [2.0.0](https://github.com/hexonet/semantic-release-whmcs/compare/v1.0.11...v2.0.0) (2021-01-13)
 
 
