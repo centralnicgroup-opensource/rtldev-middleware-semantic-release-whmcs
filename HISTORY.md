@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/hexonet/semantic-release-whmcs/compare/v2.0.1...v2.0.2) (2021-01-19)
+
+
+### Bug Fixes
+
+* **ci:** extend logging; exclude coverage from tests ([40b0a70](https://github.com/hexonet/semantic-release-whmcs/commit/40b0a702e271c9420cfc9faef59f39aa9d7d441f))
+
 ## [2.0.1](https://github.com/hexonet/semantic-release-whmcs/compare/v2.0.0...v2.0.1) (2021-01-19)
 
 
