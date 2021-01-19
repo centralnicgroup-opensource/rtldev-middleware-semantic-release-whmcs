@@ -1,0 +1,51 @@
+name: Release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    name: Test @ NodeJS - x86 - ubuntu-latest
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup NodeJS ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: |
+          npm prune
+          npm i
+      - name: Linting
+        run: npm run lint
+      - name: Tests
+        run: npm run test
+  release:
+    name: Release @ NodeJS LTS - x86 - ubuntu-latest
+    # Support [skip ci] out of box with github actions Workaround
+    # Only works for push https://github.com/actions/runner/issues/774
+    if: github.event_name == 'push' && contains(toJson(github.event.commits), '[skip ci]') == false
+    runs-on: ubuntu-latest
+    needs: "test"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Setup NodeJS LTS
+        uses: actions/setup-node@v2
+      - name: Install dependencies
+        run: |
+          npm prune
+          npm i
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
