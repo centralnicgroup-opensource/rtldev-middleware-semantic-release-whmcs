@@ -24,6 +24,10 @@ jobs:
       - name: Linting
         run: npm run lint
       - name: Tests
+        env:
+          WHMCSMP_LOGIN: ${{ secrets.WHMCSMP_LOGIN }}
+          WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
+          WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID_ISPAPI_SSL }}
         run: npm run test
   release:
     name: Release @ NodeJS LTS - x86 - ubuntu-latest
