@@ -1,6 +1,7 @@
 import test from 'ava'
 import { stub } from 'sinon'
 const publish = require('../lib/publish')
+const deleteVersion = require('../lib/delete-marketplace-version')
 
 test.beforeEach(t => {
   // Mock logger
@@ -45,7 +46,7 @@ test.serial('Verify publishing [no product id]', async t => {
   t.is(result, false)
 })
 
-test.skip('Verify publishing [all fine]', async t => {
+test.serial('Verify publishing [all fine]', async t => {
   const env = process.env
   t.truthy(env.WHMCSMP_LOGIN)
   t.truthy(env.WHMCSMP_PASSWORD)
@@ -60,4 +61,12 @@ test.skip('Verify publishing [all fine]', async t => {
   }
   const result = await publish({}, context)
   t.assert(result !== false)
+
+  const delContext = {
+    env,
+    logger: t.context.logger,
+    version: context.nextRelease.version
+  }
+  const del = await deleteVersion({}, delContext)
+  t.assert(del !== false)
 })
