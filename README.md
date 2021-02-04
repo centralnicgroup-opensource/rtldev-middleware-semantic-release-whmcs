@@ -70,10 +70,17 @@ That said, before you can use this module for publishing new product/module vers
 | `WHMCSMP_LOGIN` | **Required.** The email address of the WHMCS Marketplace account to use for authentication. |
 | `WHMCSMP_PASSWORD` | **Required.** The password of the WHMCS Marketplace account to use for authentication. |
 | `WHMCSMP_PRODUCTID` | **Required.** The product id of the product/module you want to publish versions for. |
+| `WHMCSMP_MINVERSION` | **Optional.** The minimum supported WHMCS version. Defaults to 7.10. |
+| `GH_TOKEN` | **Optional.** GitHub API authentication token to use for syncing versions. |
+| `GH_REPO` | **Optional.** GitHub repository name to use for syncing versions. |
 
 ### Options
 
 None available yet.
+
+### Routines
+
+Type `./whmcs.js --help` for command reference
 
 ## Contributing
 

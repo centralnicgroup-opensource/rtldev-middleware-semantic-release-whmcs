@@ -51,16 +51,22 @@ test.serial('Verify publishing [all fine]', async t => {
   t.truthy(env.WHMCSMP_LOGIN)
   t.truthy(env.WHMCSMP_PASSWORD)
   t.truthy(env.WHMCSMP_PRODUCTID)
+  t.truthy(env.WHMCSMP_MINVERSION)
   const context = {
     env,
     logger: t.context.logger,
     nextRelease: {
-      version: 'v6.6.6',
+      version: '0.0.1',
       notes: '# something changed\n\ntwice\n\n[link test](https://github.com/papakai) [link test2](https://github.com/papakai)\n\ndone.'
     }
   }
   const result = await publish({}, context)
   t.assert(result !== false)
+
+  // wait 5s between adding and deleting
+  await new Promise((resolve) => {
+    setTimeout(resolve, 5000)
+  })
 
   const delContext = {
     env,
