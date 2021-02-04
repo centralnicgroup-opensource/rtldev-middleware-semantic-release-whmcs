@@ -24,9 +24,12 @@ jobs:
         run: npm run lint
       - name: Tests
         env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_REPO: ${{ secrets.GH_REPO }}
           WHMCSMP_LOGIN: ${{ secrets.WHMCSMP_LOGIN }}
           WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
           WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID_ISPAPI_SSL }}
+          WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
         run: npm run test
   release:
     name: Release @ NodeJS LTS - x86 - ubuntu-latest
@@ -48,8 +51,6 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_REPO: ${{ secrets.GH_REPO }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          WHMCSMP_LOGIN: ${{ secrets.WHMCSMP_LOGIN }}
-          WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
-          WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID_ISPAPI_SSL }}
         run: npx semantic-release
