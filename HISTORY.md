@@ -1,3 +1,17 @@
+# [3.0.0](https://github.com/hexonet/semantic-release-whmcs/compare/v2.0.2...v3.0.0) (2021-02-19)
+
+
+### Features
+
+* **compatibility:** implement setting compatible whmcs versions ([905b61a](https://github.com/hexonet/semantic-release-whmcs/commit/905b61a984f718b2a490c21e99550b3a8a307859))
+* **versions:** implement adding missing github versions in whmcs marketplace ([4308538](https://github.com/hexonet/semantic-release-whmcs/commit/43085387daf6db5c5266ded8df5c2b4df1d9e7c1))
+* **versions:** implement deleting specific versions from whmcs marketplace ([b73d3f5](https://github.com/hexonet/semantic-release-whmcs/commit/b73d3f59c2d1feb7a877de06a1259298f48ea7ae))
+
+
+### BREAKING CHANGES
+
+* **versions:** introduced new environment variables
+
 ## [2.0.2](https://github.com/hexonet/semantic-release-whmcs/compare/v2.0.1...v2.0.2) (2021-01-19)
 
 
