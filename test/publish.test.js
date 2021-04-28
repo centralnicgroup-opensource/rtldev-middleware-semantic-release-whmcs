@@ -46,7 +46,7 @@ test.serial('Verify publishing [no product id]', async t => {
   t.is(result, false)
 })
 
-test.serial('Verify publishing [all fine]', async t => {
+test.skip('Verify publishing [all fine]', async t => {
   const env = process.env
   t.truthy(env.WHMCSMP_LOGIN)
   t.truthy(env.WHMCSMP_PASSWORD)
