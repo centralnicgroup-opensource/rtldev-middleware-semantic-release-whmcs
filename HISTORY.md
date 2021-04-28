@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/hexonet/semantic-release-whmcs/compare/v3.0.1...v3.0.2) (2021-04-28)
+
+
+### Bug Fixes
+
+* bump puppeteer from 8.0.0 to 9.0.0 ([577a3fc](https://github.com/hexonet/semantic-release-whmcs/commit/577a3fc1b264eb0da5b24a083bb086fbc74ce023))
+
 ## [3.0.1](https://github.com/hexonet/semantic-release-whmcs/compare/v3.0.0...v3.0.1) (2021-03-01)
 
 
