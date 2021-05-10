@@ -38,7 +38,7 @@ jobs:
           GITHUB_REPO: ${{ secrets.GH_REPO }}
           WHMCSMP_LOGIN: ${{ secrets.WHMCSMP_LOGIN }}
           WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
-          WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID_ISPAPI_SSL }}
+          WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID }}
           WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
         run: npm run test
 
