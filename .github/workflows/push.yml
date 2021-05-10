@@ -1,0 +1,33 @@
+# This workflow handle Push 
+name: Receive Push
+on:
+  push
+jobs:
+  test:
+    name: Test @ NodeJS - x86 - ubuntu-latest
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup NodeJS ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: |
+          npm prune
+          npm i
+      - name: Linting
+        run: npm run lint
+      - name: Tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_REPO: ${{ secrets.GH_REPO }}
+          WHMCSMP_LOGIN: ${{ secrets.WHMCSMP_LOGIN }}
+          WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
+          WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID_ISPAPI_SSL }}
+          WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
+        run: npm run test
