@@ -1,41 +1,15 @@
 name: Release
-on: [push, pull_request]
-
+on:
+  workflow_run:
+    workflows: 
+    - Receive Push
+    types:
+      - completed
 jobs:
-  test:
-    name: Test @ NodeJS - x86 - ubuntu-latest
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-    if: github.event_name == 'pull_request' || (github.event_name == 'push' && contains(toJson(github.event.commits), '[skip ci]') == false)
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup NodeJS ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: |
-          npm prune
-          npm i
-      - name: Linting
-        run: npm run lint
-      - name: Tests
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_REPO: ${{ secrets.GH_REPO }}
-          WHMCSMP_LOGIN: ${{ secrets.WHMCSMP_LOGIN }}
-          WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
-          WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID_ISPAPI_SSL }}
-          WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
-        run: npm run test
   release:
     name: Release @ NodeJS LTS - x86 - ubuntu-latest
-    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    if: github.event.workflow_run.head_branch == 'master' && github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    needs: "test"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
