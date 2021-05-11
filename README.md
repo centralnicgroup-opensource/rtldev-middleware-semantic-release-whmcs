@@ -84,13 +84,13 @@ Type `./whmcs.js --help` for command reference
 
 ## Contributing
 
-Please read [our development guide](https://github.com/hexonet/whmcs-ispapi-registrar/wiki/Development-Guide) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [Contribution Guide Lines](https://github.com/hexonet/semantic-release-whmcs/blob/master/CONTRIBUTING.md) for details on our code of conduct, then address a PR to us.
+Contributors are highly welcome.
 
 ## Authors
 
-* **Kai Schwarz** - *development* - [PapaKai](https://github.com/papakai)
-
-See also the list of [contributors](https://github.com/hexonet/semantic-release-whmcs/graphs/contributors) who participated in this project.
+* **Kai Schwarz** - *lead development* - [PapaKai](https://github.com/papakai)
+* **Sebastian Vassiliou** - *development* - [h9k](https://github.com/h9k)
 
 ## License
 
