@@ -68,9 +68,9 @@ test.serial('Verify publishing [all fine]', async (t) => {
   const result = await publish({}, context)
   t.assert(result !== false)
 
-  // wait 5s between adding and deleting
+  // wait 20s between adding and deleting
   await new Promise((resolve) => {
-    setTimeout(resolve, 5000)
+    setTimeout(resolve, 20000)
   })
 
   const delContext = {
