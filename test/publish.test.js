@@ -1,13 +1,18 @@
 import test from 'ava'
-import { stub } from 'sinon'
 const publish = require('../lib/publish')
 const deleteVersion = require('../lib/delete-marketplace-version')
 
 test.beforeEach((t) => {
   // Mock logger
-  t.context.log = stub()
-  t.context.error = stub()
-  t.context.logger = { log: t.context.log, error: t.context.error }
+  t.context.logger = new class {
+    log (msg) {
+      if (process.env.DEBUG && /^semantic-release:(\*|whmcs)$/.test(process.env.DEBUG)) {
+        console.log(msg)
+      }
+    }
+
+    error (msg, details) { console.error(msg + ' ' + details) }
+  }()
 })
 
 test.serial('Verify publishing [login fails]', async (t) => {
