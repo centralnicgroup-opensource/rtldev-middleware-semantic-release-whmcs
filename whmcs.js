@@ -7,7 +7,7 @@ const context = {
   logger: new class {
     log (msg) { console.log(msg) }
     info (msg) { console.log(msg) }
-    error (msg, details) { console.log(msg + ' ' + details) }
+    error (msg, details) { console.error(msg + ' ' + details) }
   }()
 }
 
