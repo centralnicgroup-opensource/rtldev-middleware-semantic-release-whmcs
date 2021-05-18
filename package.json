@@ -76,7 +76,7 @@
   },
   "dependencies": {
     "@semantic-release/error": "^2.2.0",
-    "aggregate-error": "^4.0.0",
+    "aggregate-error": "^3.0.0",
     "github-api": "^3.4.0",
     "puppeteer": "^9.0.0",
     "sinon": "^10.0.0",
