@@ -30,4 +30,9 @@ jobs:
           WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
           WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID }}
           WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
-        run: npm run test
+        run: npm run coverage
+      - name: Upload coverage folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-folder
+          path: coverage
