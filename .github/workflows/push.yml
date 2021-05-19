@@ -2,6 +2,7 @@
 name: Receive Push
 on:
   push
+    # branches: [master] # run only for master branch
 jobs:
   test:
     name: Test @ NodeJS - x86 - ubuntu-latest
@@ -36,3 +37,30 @@ jobs:
         with:
           name: coverage-folder
           path: coverage
+  release:
+    name: Release @ NodeJS LTS - x86 - ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/master' # release when pushing on master branch only
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Setup NodeJS LTS
+        uses: actions/setup-node@v2
+      - name: Install dependencies
+        run: |
+          npm prune
+          npm i
+      - name: Download coverage folder from Push workflow
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage-folder
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_REPO: ${{ secrets.GH_REPO }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
