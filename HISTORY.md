@@ -1,3 +1,18 @@
+# [3.1.0](https://github.com/hexonet/semantic-release-whmcs/compare/v3.0.2...v3.1.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* **coverage:** fixed coverage report by ignoring puppeteer browser-side code ([612403d](https://github.com/hexonet/semantic-release-whmcs/commit/612403d25f211766118ce96016967d554e976c98))
+* **gh_repo:** fix implementation of GH_REPO and syncVersions ([cf33e36](https://github.com/hexonet/semantic-release-whmcs/commit/cf33e36d8d26d4396642d33791bb774382c9fc28))
+* **gh_repo:** fix implementation of GH_REPO and syncVersions ([c4f8165](https://github.com/hexonet/semantic-release-whmcs/commit/c4f8165d0d2d1fcf3ea83680d895b35eea3abc5a))
+* **puppeteer:** ensure to hover to selector before clicking ([aad85a6](https://github.com/hexonet/semantic-release-whmcs/commit/aad85a60c42d226342d72b19ef7cf86d2ad2ca20))
+
+
+### Features
+
+* **log:** improve logging ([5573b6a](https://github.com/hexonet/semantic-release-whmcs/commit/5573b6a255ef755e67fcacbe33fdeacc232e4b15))
+
 ## [3.0.2](https://github.com/hexonet/semantic-release-whmcs/compare/v3.0.1...v3.0.2) (2021-04-28)
 
 
