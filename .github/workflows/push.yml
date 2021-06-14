@@ -2,9 +2,8 @@
 name: Receive Push
 on:
   push:
-    branches-ignore:
-      - 'dependabot/**'
-    # branches: [master] # run only for master branch
+    tags-ignore: 
+      - "**"
 jobs:
   test:
     name: Test @ NodeJS - x86 - ubuntu-latest
