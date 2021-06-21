@@ -2,6 +2,8 @@
 name: Receive Push
 on:
   push:
+    branches:
+      - "**"
     tags-ignore: 
       - "**"
 jobs:
