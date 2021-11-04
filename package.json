@@ -75,7 +75,7 @@
     "semantic-release": "^17.2.1"
   },
   "dependencies": {
-    "@semantic-release/error": "^2.2.0",
+    "@semantic-release/error": "^3.0.0",
     "aggregate-error": "^3.0.0",
     "github-api": "^3.4.0",
     "puppeteer": "^11.0.0",
