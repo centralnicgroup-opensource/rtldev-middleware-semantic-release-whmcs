@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/hexonet/semantic-release-whmcs/compare/v3.1.0...v3.1.1) (2021-11-09)
+
+
+### Performance Improvements
+
+* **dep bumps:** upgraded dependencies ([f54620f](https://github.com/hexonet/semantic-release-whmcs/commit/f54620f1fcdd54f62b6d43f15ef0a6e4b0e70292))
+
 # [3.1.0](https://github.com/hexonet/semantic-release-whmcs/compare/v3.0.2...v3.1.0) (2021-05-19)
 
 
