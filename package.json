@@ -61,7 +61,6 @@
     "@semantic-release/exec": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
     "ava": "^4.0.0",
-    "debug": "^4.2.0",
     "eslint": "^8.0.1",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
@@ -77,6 +76,7 @@
   "dependencies": {
     "@semantic-release/error": "^3.0.0",
     "aggregate-error": "^3.1.0",
+    "debug": "^4.3.4",
     "github-api": "^3.4.0",
     "puppeteer": "^14.0.0",
     "yargs": "^17.0.1"

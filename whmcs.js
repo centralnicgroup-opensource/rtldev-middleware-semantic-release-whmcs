@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 
 const { publish, syncVersions, delVersion, updateCompatibility } = require('./index.js')
 
