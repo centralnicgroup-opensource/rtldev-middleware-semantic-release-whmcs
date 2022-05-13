@@ -22,9 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: |
-          npm prune
-          npm i
+        run: npm ci
       - name: Linting
         run: npm run lint
       - name: Tests
@@ -55,9 +53,7 @@ jobs:
       - name: Setup NodeJS LTS
         uses: actions/setup-node@v2
       - name: Install dependencies
-        run: |
-          npm prune
-          npm i
+        run: npm ci
       - name: Download coverage folder from Push workflow
         uses: actions/download-artifact@v2
         with:
