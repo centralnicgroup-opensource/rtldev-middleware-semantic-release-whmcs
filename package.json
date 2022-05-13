@@ -67,7 +67,7 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-json": "^3.0.0",
     "eslint-plugin-markdown": "^2.1.0",
-    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-promise": "^6.0.0",
     "esm": "^3.2.25",
     "nyc": "^15.1.0",
