@@ -9,21 +9,21 @@ jobs:
       - name: Approve
         run: |
           echo For security reasons, all pull requests need to be approved first before running any automated CI.
-          echo Thank you for your patience. 
+          echo Thank you for your patience.
   test:
     name: Test @ NodeJS - x86 - ubuntu-latest
     runs-on: ubuntu-latest
     needs: [approve]
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [lts/*]
     environment:
       name: pr-reviews
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup NodeJS ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
@@ -39,6 +39,3 @@ jobs:
           WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID }}
           WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
         run: npm run coverage
-
-    
-  
