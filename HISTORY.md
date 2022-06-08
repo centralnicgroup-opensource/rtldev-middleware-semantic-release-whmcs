@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/hexonet/semantic-release-whmcs/compare/v3.1.2...v3.1.3) (2022-06-08)
+
+
+### Bug Fixes
+
+* **regexp:** fixing redos possibility ([53060bd](https://github.com/hexonet/semantic-release-whmcs/commit/53060bd2bb0df52dfd80aa5cd938d69a3d5f6d42))
+
 ## [3.1.2](https://github.com/hexonet/semantic-release-whmcs/compare/v3.1.1...v3.1.2) (2022-06-08)
 
 
