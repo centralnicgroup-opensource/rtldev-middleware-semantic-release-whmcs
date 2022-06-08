@@ -1,3 +1,19 @@
+# [4.0.0](https://github.com/hexonet/semantic-release-whmcs/compare/v3.1.3...v4.0.0) (2022-06-08)
+
+
+### chore
+
+* bump semantic-release from 18.0.1 to 19.0.2 ([cd94520](https://github.com/hexonet/semantic-release-whmcs/commit/cd94520c1bf99e92f762b1521137b0bd4c57d9e7))
+
+
+### BREAKING CHANGES
+
+* major upgrade of semantic-release to v19
+
+Bumps [semantic-release](https://github.com/semantic-release/semantic-release) from 18.0.1 to 19.0.2.
+- [Release notes](https://github.com/semantic-release/semantic-release/releases)
+- [Commits](https://github.com/semantic-release/semantic-release/compare/v18.0.1...v19.0.2)
+
 ## [3.1.3](https://github.com/hexonet/semantic-release-whmcs/compare/v3.1.2...v3.1.3) (2022-06-08)
 
 
