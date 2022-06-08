@@ -1,3 +1,11 @@
+## [3.1.2](https://github.com/hexonet/semantic-release-whmcs/compare/v3.1.1...v3.1.2) (2022-06-08)
+
+
+### Bug Fixes
+
+* **regex:** polygonal regular expression used on uncontrolled data ([bcaf404](https://github.com/hexonet/semantic-release-whmcs/commit/bcaf40466a59baaf4a1fe8f55c819ef3ff325064))
+* **regular expression:** fixed unnecessary escape character ([5613eba](https://github.com/hexonet/semantic-release-whmcs/commit/5613eba3684060fd33c47db1dc4a82f2eb262c77))
+
 ## [3.1.1](https://github.com/hexonet/semantic-release-whmcs/compare/v3.1.0...v3.1.1) (2021-11-09)
 
 
