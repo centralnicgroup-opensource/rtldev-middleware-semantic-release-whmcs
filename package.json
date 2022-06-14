@@ -53,8 +53,7 @@
   "scripts": {
     "coverage": "nyc npm run test",
     "test": "ava --verbose --timeout=2m",
-    "lint": "eslint --fix --config=./.eslintrc.js *.js lib/*.js lib/definitions/*.js README.md *.json test/*.test.js",
-    "semantic-release": "semantic-release"
+    "lint": "eslint --fix --config=./.eslintrc.js *.js lib/*.js lib/definitions/*.js README.md *.json test/*.test.js"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
