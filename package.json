@@ -66,11 +66,11 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-json": "^3.0.0",
     "eslint-plugin-markdown": "^2.1.0",
-    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-n": "^15.2.2",
     "eslint-plugin-promise": "^6.0.0",
     "esm": "^3.2.25",
     "nyc": "^15.1.0",
-    "semantic-release": "^19.0.2",
+    "semantic-release": "^19.0.3",
     "stream-buffers": "^3.0.2"
   },
   "dependencies": {
@@ -78,7 +78,7 @@
     "aggregate-error": "^3.1.0",
     "debug": "^4.3.4",
     "github-api": "^3.4.0",
-    "puppeteer": "^14.0.0",
+    "puppeteer": "^14.4.0",
     "yargs": "^17.0.1"
   }
 }
