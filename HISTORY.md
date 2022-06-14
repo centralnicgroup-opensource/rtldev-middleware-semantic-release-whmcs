@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/hexonet/semantic-release-whmcs/compare/v4.0.0...v4.0.1) (2022-06-14)
+
+
+### Bug Fixes
+
+* **semantic-release:** include package-lock.json in version commit ([3adb404](https://github.com/hexonet/semantic-release-whmcs/commit/3adb4047fb0b0691124a2f11ed2931adffd6f1bf))
+
 # [4.0.0](https://github.com/hexonet/semantic-release-whmcs/compare/v3.1.3...v4.0.0) (2022-06-08)
 
 
