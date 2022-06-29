@@ -1,3 +1,11 @@
+## [4.0.2](https://github.com/hexonet/semantic-release-whmcs/compare/v4.0.1...v4.0.2) (2022-06-29)
+
+
+### Bug Fixes
+
+* **ci:** introduce WITH_HEAD env parameter ([7f28751](https://github.com/hexonet/semantic-release-whmcs/commit/7f287516e2b7e518ab467a5ef4cf0e0bba1482ba))
+* **ci:** run tests with debug ([94e9a0e](https://github.com/hexonet/semantic-release-whmcs/commit/94e9a0e1efee3fda9baa030e85ffbf6fc15bcecf))
+
 ## [4.0.1](https://github.com/hexonet/semantic-release-whmcs/compare/v4.0.0...v4.0.1) (2022-06-14)
 
 
