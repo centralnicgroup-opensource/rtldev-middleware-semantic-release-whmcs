@@ -45,4 +45,5 @@ jobs:
           WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
           WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID }}
           WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
+          DEBUG: "semantic-release:whmcs"
         run: npm run coverage
