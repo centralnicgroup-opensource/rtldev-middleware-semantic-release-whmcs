@@ -34,7 +34,6 @@ jobs:
           WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
           WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID }}
           WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
-          PUPPETEER_HEADLESS: ${{ secrets.PUPPETEER_HEADLESS }}
           DEBUG: ${{ secrets.DEBUG }}
         run: npm run coverage
       - name: Upload coverage folder
