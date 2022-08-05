@@ -31,12 +31,6 @@ jobs:
         run: npm ci
       - name: Linting
         run: npm run lint
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: javascript
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
       - name: Tests
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -47,3 +41,9 @@ jobs:
           WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
           DEBUG: "semantic-release:whmcs"
         run: npm run coverage
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
