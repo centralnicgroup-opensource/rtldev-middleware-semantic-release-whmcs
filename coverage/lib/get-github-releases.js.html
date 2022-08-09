@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -96,9 +96,7 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -109,11 +107,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -122,10 +115,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,27 +140,25 @@ const GitHub = <span class="cstat-no" title="statement not covered" >require('gi
  * A method to get releases from github repository
  */
 <span class="cstat-no" title="statement not covered" >module.exports = <span class="fstat-no" title="function not covered" >as</span>ync (pluginConfig, context) =&gt; {</span>
-  const {
-    logger
-  } = <span class="cstat-no" title="statement not covered" >context</span>
-&nbsp;
 <span class="cstat-no" title="statement not covered" >  debug('Getting releases from GitHub')</span>
-<span class="cstat-no" title="statement not covered" >  logger.log('Getting releases from GitHub')</span>
 &nbsp;
-  const { githubREPO, githubTOKEN } = <span class="cstat-no" title="statement not covered" >resolveConfig(context)</span>
+  const { ghrepo, ghtoken } = <span class="cstat-no" title="statement not covered" >resolveConfig(context)</span>
 &nbsp;
   const gh = <span class="cstat-no" title="statement not covered" >new GitHub({</span>
-    token: githubTOKEN
+    token: ghtoken
   })
-<span class="cstat-no" title="statement not covered" >  if (githubREPO) { // optional by default false</span>
-    const repo = <span class="cstat-no" title="statement not covered" >githubREPO.split('/')</span>
+<span class="cstat-no" title="statement not covered" >  if (ghrepo) {</span>
+    // optional by default false
+    const repo = <span class="cstat-no" title="statement not covered" >ghrepo.split('/')</span>
     const githubReleases = <span class="cstat-no" title="statement not covered" >await gh.getRepo(repo[0], repo[1]).listReleases()</span>
 <span class="cstat-no" title="statement not covered" >    if (githubReleases.status === 200) {</span>
-<span class="cstat-no" title="statement not covered" >      githubReleases.data.forEach(<span class="fstat-no" title="function not covered" >r </span>=&gt; <span class="cstat-no" title="statement not covered" >logger.log(`Detected GitHub release ${r.name.substring(1)}`))</span></span>
+<span class="cstat-no" title="statement not covered" >      githubReleases.data.forEach(<span class="fstat-no" title="function not covered" >(r</span>) =&gt;</span>
+<span class="cstat-no" title="statement not covered" >        debug(`Detected GitHub release ${r.name.substring(1)}`)</span>
+      )
 <span class="cstat-no" title="statement not covered" >      githubReleases.data.reverse()</span>
 <span class="cstat-no" title="statement not covered" >      return githubReleases.data</span>
     }
-<span class="cstat-no" title="statement not covered" >    logger.log('Failed to get releases from GitHub')</span>
+<span class="cstat-no" title="statement not covered" >    debug('Failed to get releases from GitHub')</span>
   }
 <span class="cstat-no" title="statement not covered" >  return false</span>
 }
@@ -175,7 +169,7 @@ const GitHub = <span class="cstat-no" title="statement not covered" >require('gi
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Jun 29 2022 13:20:57 GMT+0000 (Coordinated Universal Time)
+                at 2022-08-09T11:01:27.229Z
             </div>
         <script src="../prettify.js"></script>
         <script>

@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/hexonet/semantic-release-whmcs/compare/v4.0.2...v4.0.3) (2022-08-09)
+
+
+### Bug Fixes
+
+* **with_head:** env var renamed to PUPPETEER_HEADLESS, code reviewed/patched ([5278c61](https://github.com/hexonet/semantic-release-whmcs/commit/5278c618ec6e515651319f235e4a78d6dbd2597c))
+
 ## [4.0.2](https://github.com/hexonet/semantic-release-whmcs/compare/v4.0.1...v4.0.2) (2022-06-29)
 
 
