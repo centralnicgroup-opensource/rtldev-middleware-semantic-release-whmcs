@@ -5,17 +5,17 @@ const setCompatibleVersions = require('./lib/set-compatible-versions')
 const githubReleases = require('./lib/get-github-releases.js')
 const marketplaceVersions = require('./lib/scrape-marketplace-versions.js')
 
-let verified
+let verified;
 
 /**
  * Called by semantic-release during the verify step
  * @param {*} pluginConfig The semantic-release plugin config
  * @param {*} context The context provided by semantic-release
  */
-async function verifyConditions (pluginConfig, context) {
+async function verifyConditions(pluginConfig, context) {
   if (!verified) {
-    await verifyWHMCS(pluginConfig, context)
-    verified = true
+    await verifyWHMCS(pluginConfig, context);
+    verified = true;
   }
 }
 
@@ -24,12 +24,12 @@ async function verifyConditions (pluginConfig, context) {
  * @param {*} pluginConfig The semantic-release plugin config
  * @param {*} context The context provided by semantic-release
  */
-async function publish (pluginConfig, context) {
+async function publish(pluginConfig, context) {
   await verifyConditions(pluginConfig, context)
   return publishWHMCS(pluginConfig, context)
 }
 
-async function syncVersions (pluginConfig, context) {
+async function syncVersions(pluginConfig, context) {
   await verifyConditions(pluginConfig, context)
   const releases = await githubReleases(pluginConfig, context)
 
@@ -49,18 +49,25 @@ async function syncVersions (pluginConfig, context) {
   }
 }
 
-async function delVersion (pluginConfig, context) {
+
+async function delVersion(pluginConfig, context) {
   await verifyConditions(pluginConfig, context)
   await deleteVersion(pluginConfig, context)
 }
 
-async function updateCompatibility (pluginConfig, context) {
+async function updateCompatibility(pluginConfig, context) {
   await verifyConditions(pluginConfig, context)
   await setCompatibleVersions(pluginConfig, context)
 }
 
+async function fail(pluginConfig, context) {
+  await verifyConditions(pluginConfig, context)
+}
+
 module.exports = {
+  verifyConditions,
   publish,
+  fail,
   syncVersions,
   delVersion,
   githubReleases,

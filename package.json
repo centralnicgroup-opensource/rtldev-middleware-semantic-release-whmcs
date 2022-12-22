@@ -16,9 +16,9 @@
     "node": ">=16.15.1",
     "npm": ">=8.11.0"
   },
-  "homepage": "https://github.com/hexonet/semantic-release-whmcs#readme",
-  "repository": "github:hexonet/semantic-release-whmcs",
-  "bugs": "https://github.com/hexonet/semantic-release-whmcs/issues",
+  "homepage": "https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs#readme",
+  "repository": "github:centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs",
+  "bugs": "https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/issues",
   "maintainers": [
     {
       "name": "Kai Schwarz",
