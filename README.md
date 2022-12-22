@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/semantic-release-whmcs.svg?style=flat)](https://www.npmjs.com/package/semantic-release-whmcs)
 [![node](https://img.shields.io/node/v/semantic-release-whmcs.svg)](https://www.npmjs.com/package/semantic-release-whmcs)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Build Status](https://github.com/hexonet/semantic-release-whmcs/workflows/Release/badge.svg?branch=master)](https://github.com/hexonet/semantic-release-whmcs/workflows/Release/badge.svg?branch=master)
+[![Build Status](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/workflows/Release/badge.svg?branch=master)](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/workflows/Release/badge.svg?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/hexonet/node-sdk/blob/master/CONTRIBUTING.md)
 
@@ -17,8 +17,8 @@
 ## Resources
 
 * [Usage Guide](#usage-guide)
-* [Release Notes](https://github.com/hexonet/semantic-release-whmcs/releases)
-* [Development Guide](https://github.com/hexonet/semantic-release-whmcs/wiki/Development-Guide)
+* [Release Notes](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/releases)
+* [Development Guide](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/wiki/Development-Guide)
 
 ## Usage Guide
 
@@ -85,7 +85,7 @@ Type `./whmcs.js --help` for command reference
 
 ## Contributing
 
-Please read [Contribution Guide Lines](https://github.com/hexonet/semantic-release-whmcs/blob/master/CONTRIBUTING.md) for details on our code of conduct, then address a PR to us.
+Please read [Contribution Guide Lines](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/blob/master/CONTRIBUTING.md) for details on our code of conduct, then address a PR to us.
 Contributors are highly welcome.
 
 ## Authors
@@ -95,6 +95,6 @@ Contributors are highly welcome.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/hexonet/semantic-release-whmcs/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/blob/master/LICENSE) file for details.
 
 [HEXONET GmbH](https://hexonet.net)
