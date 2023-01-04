@@ -1,3 +1,10 @@
+## [4.0.4](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v4.0.3...v4.0.4) (2023-01-04)
+
+
+### Bug Fixes
+
+* **conditions:** verifies required env variables before publish step ([5ed84c9](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/5ed84c9b84dcb031d0784f1e0b786b2fefcb87e8))
+
 ## [4.0.3](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v4.0.2...v4.0.3) (2022-08-09)
 
 
