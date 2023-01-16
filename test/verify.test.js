@@ -1,6 +1,7 @@
-const test = require("ava");
-const { WritableStreamBuffer } = require("stream-buffers");
-const verify = require("../lib/verify");
+import test from "ava";
+import { WritableStreamBuffer } from "stream-buffers";
+import verify from "../lib/verify.js";
+
 /* eslint camelcase: ["error", {properties: "never"}] */
 
 test.beforeEach((t) => {
@@ -8,10 +9,7 @@ test.beforeEach((t) => {
   t.context.stderr = new WritableStreamBuffer();
   // Mock logger
   t.context.log = function (msg) {
-    if (
-      process.env.DEBUG &&
-      /^semantic-release:(\*|whmcs)$/.test(process.env.DEBUG)
-    ) {
+    if (process.env.DEBUG && /^semantic-release:(\*|whmcs)$/.test(process.env.DEBUG)) {
       console.log(msg);
     }
   };
@@ -29,9 +27,9 @@ test.serial("Verify github token [missing]", async (t) => {
     logger: t.context.logger,
     options: {},
   };
-  const [error] = await t.throwsAsync(verify({}, context));
-  t.is(error.name, "SemanticReleaseError");
-  t.is(error.code, "ENOGHTOKEN");
+  const errors = [...(await t.throwsAsync(verify({}, context))).errors];
+  t.is(errors[0].name, "SemanticReleaseError");
+  t.is(errors[0].code, "ENOGHTOKEN");
 });
 
 test.serial("Verify credentials [no login]", async (t) => {
@@ -44,9 +42,9 @@ test.serial("Verify credentials [no login]", async (t) => {
     logger: t.context.logger,
     options: {},
   };
-  const [error] = await t.throwsAsync(verify({}, context));
-  t.is(error.name, "SemanticReleaseError");
-  t.is(error.code, "EWHMCSNOCREDENTIALS");
+  const errors = [...(await t.throwsAsync(verify({}, context))).errors];
+  t.is(errors[0].name, "SemanticReleaseError");
+  t.is(errors[0].code, "EWHMCSNOCREDENTIALS");
 });
 
 test.serial("Verify credentials [no password]", async (t) => {
@@ -57,9 +55,9 @@ test.serial("Verify credentials [no password]", async (t) => {
     logger: t.context.logger,
     options: {},
   };
-  const [error] = await t.throwsAsync(verify({}, context));
-  t.is(error.name, "SemanticReleaseError");
-  t.is(error.code, "EWHMCSNOCREDENTIALS");
+  const errors = [...(await t.throwsAsync(verify({}, context))).errors];
+  t.is(errors[0].name, "SemanticReleaseError");
+  t.is(errors[0].code, "EWHMCSNOCREDENTIALS");
 });
 
 test.serial("Verify product id [no product id]", async (t) => {
@@ -74,9 +72,9 @@ test.serial("Verify product id [no product id]", async (t) => {
     logger: t.context.logger,
     options: {},
   };
-  const [error] = await t.throwsAsync(verify({}, context));
-  t.is(error.name, "SemanticReleaseError");
-  t.is(error.code, "EWHMCSNOPRODUCTID");
+  const errors = [...(await t.throwsAsync(verify({}, context))).errors];
+  t.is(errors[0].name, "SemanticReleaseError");
+  t.is(errors[0].code, "EWHMCSNOPRODUCTID");
 });
 
 test.serial("Verify product id [invalid product id]", async (t) => {
@@ -92,9 +90,9 @@ test.serial("Verify product id [invalid product id]", async (t) => {
     logger: t.context.logger,
     options: {},
   };
-  const [error] = await t.throwsAsync(verify({}, context));
-  t.is(error.name, "SemanticReleaseError");
-  t.is(error.code, "EWHMCSINVALIDPRODUCTID");
+  const errors = [...(await t.throwsAsync(verify({}, context))).errors];
+  t.is(errors[0].name, "SemanticReleaseError");
+  t.is(errors[0].code, "EWHMCSINVALIDPRODUCTID");
 });
 
 test.serial("Verify data [all fine]", async (t) => {
