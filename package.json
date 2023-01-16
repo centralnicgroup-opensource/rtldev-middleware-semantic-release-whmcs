@@ -3,6 +3,7 @@
   "description": "`semantic-release` plugin for auto-publishing on WHMCS marketplace",
   "version": "4.0.4",
   "private": false,
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -10,11 +11,10 @@
     "name": "Kai Schwarz",
     "email": "kschwarz@hexonet.net"
   },
-  "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": ">=16.15.1",
-    "npm": ">=8.11.0"
+    "node": ">=18",
+    "npm": "8.11.0"
   },
   "homepage": "https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs#readme",
   "repository": "github:centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs",
@@ -34,9 +34,24 @@
     "semantic-release",
     "version"
   ],
-  "nyc": {
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ],
+    "nodeArguments": [
+      "--no-warnings"
+    ],
+    "timeout": "2m"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "es5"
+  },
+  "c8": {
     "include": [
-      "lib/**/*.js"
+      "lib/**/*.js",
+      "index.js",
+      "cli.js"
     ],
     "reporter": [
       "json",
@@ -45,39 +60,28 @@
     ],
     "all": true
   },
-  "ava": {
-    "require": [
-      "esm"
-    ]
-  },
+  "main": "index.js",
   "scripts": {
-    "coverage": "nyc npm run test",
-    "test": "ava --fail-fast --verbose --timeout=2m",
-    "lint": "eslint --fix --config=./.eslintrc.js *.js lib/*.js lib/definitions/*.js README.md *.json test/*.test.js"
+    "test": "c8 ava --verbose",
+    "lint": "prettier --check \"*.{js,json}\" \".github/**/*.{md,yml}\" \"{lib,test}/*.js\"",
+    "lint:fix": "prettier --write \"*.{js,json}\" \".github/**/*.{md,yml}\" \"{lib,test}/*.js\""
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/exec": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
-    "ava": "^5.1.0",
-    "eslint": "^8.0.1",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-json": "^3.0.0",
-    "eslint-plugin-markdown": "^3.0.0",
-    "eslint-plugin-n": "^15.2.2",
-    "eslint-plugin-promise": "^6.0.0",
-    "esm": "^3.2.25",
-    "nyc": "^15.1.0",
-    "semantic-release": "^19.0.3",
+    "ava": "5.1.1",
+    "c8": "^7.12.0",
+    "prettier": "^2.8.3",
+    "semantic-release": "^20.0.2",
     "stream-buffers": "^3.0.2"
   },
   "dependencies": {
     "@semantic-release/error": "^3.0.0",
-    "aggregate-error": "^3.1.0",
+    "aggregate-error": "^4.0.1",
     "debug": "^4.3.4",
     "github-api": "^3.4.0",
     "puppeteer": "^19.4.1",
-    "yargs": "^17.0.1"
+    "yargs": "^17.5.1"
   }
 }

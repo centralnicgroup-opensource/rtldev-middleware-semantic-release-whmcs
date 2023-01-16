@@ -1,15 +1,12 @@
-const test = require("ava");
-const publish = require("../lib/publish");
-const deleteVersion = require("../lib/delete-marketplace-version");
+import test from "ava";
+import publish from "../lib/publish.js";
+import deleteVersion from "../lib/delete-marketplace-version.js";
 
 test.beforeEach((t) => {
   // Mock logger
   t.context.logger = new (class {
     log(msg) {
-      if (
-        process.env.DEBUG &&
-        /^semantic-release:(\*|whmcs)$/.test(process.env.DEBUG)
-      ) {
+      if (process.env.DEBUG && /^semantic-release:(\*|whmcs)$/.test(process.env.DEBUG)) {
         console.log(msg);
       }
     }
@@ -72,10 +69,9 @@ test.serial("Verify publishing [all fine]", async (t) => {
   };
   const result = await publish({}, context);
   t.assert(result !== false);
-
   if (result) {
     // wait 15s between adding and deleting
-    await new Promise((resolve) => setTimeout(resolve, 15000));
+    await new Promise((resolve) => setTimeout(resolve, 20000));
 
     const delContext = {
       env,
