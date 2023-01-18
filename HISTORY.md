@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v4.0.4...v5.0.0) (2023-01-18)
+
+
+### chore
+
+* **node:** Refactored SemanticRelease to make it compatible with ESM ([f5a3640](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/f5a36404e978d072f60497787074301d34255633))
+
+
+### BREAKING CHANGES
+
+* **node:** Ported to ESM
+
 ## [4.0.4](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v4.0.3...v4.0.4) (2023-01-04)
 
 
