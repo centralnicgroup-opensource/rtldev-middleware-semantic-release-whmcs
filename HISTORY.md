@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.0...v5.0.1) (2023-01-18)
+
+
+### Bug Fixes
+
+* **npm:** launch new version to correctly cover "engines" listed in package.json ([4bb1443](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/4bb14433b04f56855f89b7f9857498edfc098dea))
+
 # [5.0.0](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v4.0.4...v5.0.0) (2023-01-18)
 
 
