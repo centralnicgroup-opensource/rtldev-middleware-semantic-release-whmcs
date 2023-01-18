@@ -14,6 +14,8 @@
 | `verifyConditions` | Verify the presence and the validity of the authentication credentials (set via [environment variables](#environment-variables)) and the product id option configuration. |
 | `publish` | Publish product/module version to [WHMCS Marketplace](https://marketplace.whmcs.com) including changelog notes. |
 
+FYI: This module is ESM ready!
+
 ## Resources
 
 * [Usage Guide](#usage-guide)
