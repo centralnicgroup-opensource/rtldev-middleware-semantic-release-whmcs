@@ -65,6 +65,9 @@
     "lint": "prettier --check \"*.{js,json}\" \".github/**/*.{md,yml}\" \"{lib,test}/*.js\"",
     "lint:fix": "prettier --write \"*.{js,json}\" \".github/**/*.{md,yml}\" \"{lib,test}/*.js\""
   },
+  "overrides": {
+    "http-cache-semantics": "^4.1.1"
+  },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/exec": "^6.0.2",
