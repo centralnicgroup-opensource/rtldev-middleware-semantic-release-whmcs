@@ -79,7 +79,7 @@
     "stream-buffers": "^3.0.2"
   },
   "dependencies": {
-    "@semantic-release/error": "^3.0.0",
+    "@semantic-release/error": "^4.0.0",
     "aggregate-error": "^4.0.1",
     "debug": "^4.3.4",
     "github-api": "^3.4.0",
