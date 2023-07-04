@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.1...v5.0.2) (2023-07-04)
+
+
+### Bug Fixes
+
+* **puppet.js:** headless mode to 'new' ([9fb86c6](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/9fb86c65018776ef1e228d40dd1790bf40950587))
+
 ## [5.0.1](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.0...v5.0.1) (2023-01-18)
 
 
