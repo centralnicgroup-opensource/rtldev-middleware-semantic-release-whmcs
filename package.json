@@ -1,7 +1,7 @@
 {
   "name": "@hexonet/semantic-release-whmcs",
   "description": "`semantic-release` plugin for auto-publishing on WHMCS marketplace",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "private": false,
   "type": "module",
   "publishConfig": {
@@ -67,7 +67,7 @@
   },
   "overrides": {
     "http-cache-semantics": "^4.1.1",
-    "word-wrap" : "npm:@aashutoshrathi/word-wrap@1.2.6"
+    "word-wrap": "npm:@aashutoshrathi/word-wrap@1.2.6"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",

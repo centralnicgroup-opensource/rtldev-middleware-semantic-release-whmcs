@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.2...v5.0.3) (2023-07-11)
+
+
+### Bug Fixes
+
+* **dep-bump:** word-wrap added to overrides (vulnerability) ([7b40e03](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/7b40e038369f22cf941b8c93cb6c94534d7baff5))
+
 ## [5.0.2](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.1...v5.0.2) (2023-07-04)
 
 
