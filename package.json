@@ -66,7 +66,8 @@
     "lint:fix": "prettier --write \"*.{js,json}\" \".github/**/*.{md,yml}\" \"{lib,test}/*.js\""
   },
   "overrides": {
-    "http-cache-semantics": "^4.1.1"
+    "http-cache-semantics": "^4.1.1",
+    "word-wrap" : "npm:@aashutoshrathi/word-wrap@1.2.6"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
