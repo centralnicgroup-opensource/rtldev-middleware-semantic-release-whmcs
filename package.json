@@ -84,7 +84,7 @@
     "aggregate-error": "^4.0.1",
     "debug": "^4.3.4",
     "github-api": "^3.4.0",
-    "puppeteer": "^20.0.0",
+    "puppeteer": "^21.1.0",
     "yargs": "^17.7.1"
   }
 }
