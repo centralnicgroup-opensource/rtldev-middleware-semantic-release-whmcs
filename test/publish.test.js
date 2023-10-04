@@ -79,6 +79,7 @@ test.serial("Verify publishing [all fine]", async (t) => {
       version: context.nextRelease.version,
     };
     const del = await deleteVersion({}, delContext);
+
     t.assert(del !== false);
   }
 });

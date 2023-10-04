@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [lts/*]
+        node-version:
+          - ${{ vars.RTLDEV_MW_CI_NODE_VERSION }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3

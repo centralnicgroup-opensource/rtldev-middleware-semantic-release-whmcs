@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    name: Release @ NodeJS LTS - x86 - ubuntu-latest
+    name: Release @ ubuntu-latest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,10 +14,10 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Setup NodeJS LTS
+      - name: Setup NodeJS ${{ vars.RTLDEV_MW_CI_NODE_VERSION }}
         uses: actions/setup-node@v3
         with:
-          node-version: lts/*
+          node-version: ${{ vars.RTLDEV_MW_CI_NODE_VERSION }}
           cache: npm
       - name: Install dependencies
         run: npm ci
@@ -26,4 +26,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_REPO: ${{ secrets.GH_REPO }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          RTLDEV_MW_NOTIFICATION_URI: ${{ secrets.RTLDEV_MW_NOTIFICATION_URI }}
         run: npx semantic-release

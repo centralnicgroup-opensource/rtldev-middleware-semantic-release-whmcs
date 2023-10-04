@@ -8,6 +8,12 @@
         "changelogFile": "HISTORY.md"
       }
     ],
+    [
+      "@semantic-release/exec",
+      {
+        "successCmd": "gulp -f gulpfile.cjs publish --notes \"${encodeURIComponent(nextRelease.notes)}\""
+      }
+    ],
     "@semantic-release/npm",
     [
       "@semantic-release/git",
