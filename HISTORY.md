@@ -1,3 +1,10 @@
+## [5.0.4](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.3...v5.0.4) (2023-10-09)
+
+
+### Bug Fixes
+
+* **package.json & releaserc.json:** Semantic release bump to 22.0.5 and node to latest, gulp plugin to release notifications on teams ([b57bcbd](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/b57bcbd40ceca2661a4141ee943fb900f2691f62))
+
 ## [5.0.3](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.2...v5.0.3) (2023-07-11)
 
 
