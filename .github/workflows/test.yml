@@ -11,7 +11,7 @@ on:
 
 jobs:
   test:
-    name: Test @ NodeJS - x86 - ubuntu-latest
+    name: Test @ ubuntu-latest
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,12 +33,12 @@ jobs:
       - name: Tests
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_REPO: ${{ secrets.GH_REPO }}
+          GITHUB_REPO: ${{ vars.GH_REPO }}
           WHMCSMP_LOGIN: ${{ secrets.WHMCSMP_LOGIN }}
           WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
-          WHMCSMP_PRODUCTID: ${{ secrets.WHMCSMP_PRODUCTID }}
-          WHMCSMP_MINVERSION: ${{ secrets.WHMCSMP_MINVERSION }}
-          DEBUG: ${{ secrets.DEBUG }}
+          WHMCSMP_PRODUCTID: ${{ vars.WHMCSMP_PRODUCTID }}
+          WHMCSMP_MINVERSION: ${{ vars.WHMCSMP_MINVERSION }}
+          DEBUG: ${{ vars.DEBUG }}
         run: npm run test
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
