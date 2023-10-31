@@ -1,10 +1,6 @@
 name: Lint codebase & Execute tests
 on:
   workflow_call:
-  pull_request:
-    types:
-      - opened
-      - synchronize
 
 jobs:
   test:
