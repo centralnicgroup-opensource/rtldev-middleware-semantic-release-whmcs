@@ -5,7 +5,9 @@ on:
 jobs:
   test:
     name: 🧪 Testing & Testing
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RTLDEV_MW_CI_OS }}
+    permissions:
+      contents: read
     strategy:
       matrix:
         node-version: ${{ fromJson(vars.RTLDEV_MW_CI_NODE_MATRIX) }}
@@ -35,8 +37,11 @@ jobs:
 
   perform_codeql_analysis:
     name: 🧪 CodeQL Analysis
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RTLDEV_MW_CI_OS }}
     needs: test
+    permissions:
+      contents: read
+      security-events: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
