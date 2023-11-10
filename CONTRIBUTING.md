@@ -7,7 +7,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Pull Request Process
 
-Read [here](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/wiki/Development-Guide#pull-request-pr-procedure).
+Please fork the repository and address your PR finally to us. Thanks so much for contributing!
 
 ## Code of Conduct
 
