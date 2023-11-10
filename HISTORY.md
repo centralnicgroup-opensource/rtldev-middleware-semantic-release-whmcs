@@ -1,3 +1,10 @@
+## [5.0.8](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.7...v5.0.8) (2023-11-10)
+
+
+### Bug Fixes
+
+* **security fix:** for axios ([2aba46f](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/2aba46fd8419008fe04295acc08fc2e3a1664c83))
+
 ## [5.0.7](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.6...v5.0.7) (2023-11-10)
 
 
