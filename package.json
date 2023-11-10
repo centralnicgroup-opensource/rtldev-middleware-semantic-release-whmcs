@@ -67,7 +67,9 @@
   },
   "overrides": {
     "http-cache-semantics": "^4.1.1",
-    "word-wrap": "npm:@aashutoshrathi/word-wrap@1.2.6"
+    "word-wrap": "npm:@aashutoshrathi/word-wrap@1.2.6",
+    "axios": "^1.6.0",
+    "glob-parent": "^5.1.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
