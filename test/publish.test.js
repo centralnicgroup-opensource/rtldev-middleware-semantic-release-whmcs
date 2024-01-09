@@ -64,7 +64,7 @@ test.serial("Verify publishing [all fine]", async (t) => {
     nextRelease: {
       version: "0.0.1",
       notes:
-        "# something changed\n\ntwice\n\n[link test](https://github.com/papakai) [link test2](https://github.com/papakai)\n\ndone.",
+        "# something changed\n\ntwice\n\n[link test](https://github.com/kaischwarz-cnic) [link test2](https://github.com/kaischwarz-cnic)\n\ndone.",
     },
   };
   const result = await publish({}, context);
