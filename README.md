@@ -92,8 +92,8 @@ Contributors are highly welcome.
 
 ## Authors
 
-* **Kai Schwarz** - *lead development* - [PapaKai](https://github.com/papakai)
-* **Sebastian Vassiliou** - *development* - [h9k](https://github.com/h9k)
+* **Kai Schwarz** - *lead development* - [PapaKai](https://github.com/KaiSchwarz-cnic)
+* **Sebastian Vassiliou** - *development* - [SebastianVassiliou-cnic](https://github.com/SebastianVassiliou-cnic)
 
 ## License
 
