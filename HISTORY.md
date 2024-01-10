@@ -1,3 +1,10 @@
+## [5.0.13](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.12...v5.0.13) (2024-1-10)
+
+
+### Bug Fixes
+
+* **deps:** bump follow-redirects from 1.15.3 to 1.15.4 ([f173697](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/f173697250626c55337ac1c20f4553e8058aa9be))
+
 ## [5.0.12](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.11...v5.0.12) (2024-1-5)
 
 
