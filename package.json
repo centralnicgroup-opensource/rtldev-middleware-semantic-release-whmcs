@@ -80,7 +80,7 @@
     "gulp": "^4.0.2",
     "prettier": "^3.0.0",
     "rtldev-middleware-gulp-release-notification-plugin": "github:centralnicgroup-opensource/rtldev-middleware-gulp-release-notification-plugin#semver:^2.0.0",
-    "semantic-release": "^22.0.5",
+    "semantic-release": "^23.0.0",
     "stream-buffers": "^3.0.2"
   },
   "dependencies": {
