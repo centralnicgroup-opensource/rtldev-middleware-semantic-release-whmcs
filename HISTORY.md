@@ -1,3 +1,10 @@
+## [5.0.18](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.17...v5.0.18) (2024-03-18)
+
+
+### Bug Fixes
+
+* **package.json:** puppeteer version bumped to v22.5.0 ([5ac0bd7](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/5ac0bd716d5e8881731ab161401672fa84f839c1))
+
 ## [5.0.17](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.16...v5.0.17) (2024-03-18)
 
 
