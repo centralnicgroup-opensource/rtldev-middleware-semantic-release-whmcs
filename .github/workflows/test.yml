@@ -1,60 +1,11 @@
-name: Lint codebase & Execute tests
+name: Dependabot auto-merge & tests
 on:
-  workflow_call:
+  pull_request:
+    types:
+      - opened
+      - synchronize
 
 jobs:
-  test:
-    name: 🧪 Testing & Testing
-    runs-on: ${{ vars.RTLDEV_MW_CI_OS }}
-    permissions:
-      contents: read
-    strategy:
-      matrix:
-        node-version: ${{ fromJson(vars.RTLDEV_MW_CI_NODE_MATRIX) }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup NodeJS ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Linting
-        run: npm run lint
-      - name: Tests
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_REPO: ${{ vars.GH_REPO }}
-          WHMCSMP_LOGIN: ${{ secrets.WHMCSMP_LOGIN }}
-          WHMCSMP_PASSWORD: ${{ secrets.WHMCSMP_PASSWORD }}
-          WHMCSMP_PRODUCTID: ${{ vars.WHMCSMP_PRODUCTID }}
-          WHMCSMP_MINVERSION: ${{ vars.WHMCSMP_MINVERSION }}
-          DEBUG: ${{ vars.DEBUG }}
-        run: npm run test
-
-  perform_codeql_analysis:
-    name: 🧪 CodeQL Analysis
-    runs-on: ${{ vars.RTLDEV_MW_CI_OS }}
-    needs: test
-    permissions:
-      contents: read
-      security-events: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup NodeJS ${{ vars.RTLDEV_MW_CI_NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ vars.RTLDEV_MW_CI_NODE_VERSION }}
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: javascript
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+  tests:
+    uses: centralnicgroup-opensource/rtldev-middleware-shareable-workflows/.github/workflows/semantic-release-whmcs-test.yml@main
+    secrets: inherit
