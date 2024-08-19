@@ -1,3 +1,10 @@
+## [5.0.23](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.22...v5.0.23) (2024-08-19)
+
+
+### Bug Fixes
+
+* **deps:** bump axios from 1.6.8 to 1.7.4 ([efe8bb6](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/efe8bb65b6dfb1d6c1d83e4c248ba8663ecb56c0))
+
 ## [5.0.22](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.21...v5.0.22) (2024-06-21)
 
 
