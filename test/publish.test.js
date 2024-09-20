@@ -55,6 +55,7 @@ test.serial("Verify publishing [no product id]", async (t) => {
 
 test.serial("Verify publishing [all fine]", async (t) => {
   const env = process.env;
+  env.WHMCSMP_PRODUCTID = "4887"; // deprecated module
   t.truthy(env.WHMCSMP_LOGIN);
   t.truthy(env.WHMCSMP_PASSWORD);
   t.truthy(env.WHMCSMP_PRODUCTID);
@@ -70,8 +71,8 @@ test.serial("Verify publishing [all fine]", async (t) => {
   const result = await publish({}, context);
   t.assert(result !== false);
   if (result) {
-    // wait 15s between adding and deleting
-    await new Promise((resolve) => setTimeout(resolve, 20000));
+    // wait 10s between adding and deleting
+    await new Promise((resolve) => setTimeout(resolve, 10 * 1000));
 
     const delContext = {
       env,
