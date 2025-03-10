@@ -1,3 +1,10 @@
+## [5.0.58](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.57...v5.0.58) (2025-03-10)
+
+
+### Bug Fixes
+
+* **get-github-releases.js:** replace github-api with @octokit/rest for GitHub releases ([b68559b](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/b68559b927fce7c8d35c89d7987218efac698fb8))
+
 ## [5.0.57](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.56...v5.0.57) (2025-03-10)
 
 
