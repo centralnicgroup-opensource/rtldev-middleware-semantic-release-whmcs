@@ -68,7 +68,6 @@
   "overrides": {
     "http-cache-semantics": "^4.1.1",
     "word-wrap": "npm:@aashutoshrathi/word-wrap@1.2.6",
-    "axios": "^1.8.2",
     "glob-parent": "^5.1.2"
   },
   "devDependencies": {
@@ -83,10 +82,10 @@
     "stream-buffers": "^3.0.2"
   },
   "dependencies": {
+    "@octokit/rest": "^21.1.1",
     "@semantic-release/error": "^4.0.0",
     "aggregate-error": "^5.0.0",
     "debug": "^4.3.4",
-    "github-api": "^3.4.0",
     "puppeteer": ">=23.4.0",
     "yargs": "^17.7.1"
   }
