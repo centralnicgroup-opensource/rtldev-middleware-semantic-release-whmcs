@@ -55,7 +55,7 @@ With this example product/module versions will be published to the [WHMCS Market
 
 The WHMCS Marketplace authentication configuration is **required** and can be set via [environment variables](#environment-variables).
 
-If you don't have an WHMCS Marketplace account yet, please create one. The credentials have to be made available in your CI environment via the `WHMCSMP_LOGIN` and  `WHMCSMP_PASSWORD` environment variables. The account must have access to the product(s) you want to publish new versions for.
+If you don't have a WHMCS Marketplace account yet, please create one. The credentials have to be made available in your CI environment via the `WHMCSMP_LOGIN` and  `WHMCSMP_PASSWORD` environment variables. The account must have access to the product(s) you want to publish new versions for.
 
 ### WHMCS Marketplace Product ID
 
