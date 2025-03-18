@@ -1,3 +1,10 @@
+## [5.0.59](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.58...v5.0.59) (2025-03-18)
+
+
+### Bug Fixes
+
+* **error.js:** EWHMCSNOCREDENTIALS details env var names ([daf71d3](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/daf71d37085917abb61916dfbdcc37483340e82a))
+
 ## [5.0.58](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.0.57...v5.0.58) (2025-03-10)
 
 
