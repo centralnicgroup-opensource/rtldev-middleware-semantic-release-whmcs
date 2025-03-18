@@ -32,7 +32,7 @@ FYI: This module is ESM ready!
 ### Install
 
 ```bash
-> npm i semantic-release-whmcs -D
+> npm i @hexonet/semantic-release-whmcs -D
 ```
 
 ### Configuration
@@ -44,7 +44,7 @@ The plugin can be loaded in the [**semantic-release** configuration file](https:
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "semantic-release-whmcs"
+    "@hexonet/semantic-release-whmcs"
   ]
 }
 ```
