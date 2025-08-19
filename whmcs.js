@@ -1,3 +1,5 @@
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 import { createRequire } from "node:module";
 import { publish, syncVersions, delVersion, updateCompatibility } from "./index.js";
 const require = createRequire(import.meta.url);
@@ -18,7 +20,7 @@ const context = {
 };
 
 // eslint-disable-next-line no-unused-expressions
-require("yargs")
+yargs(hideBin(process.argv))
   .scriptName("whmcs.js")
   .usage("$0 <cmd> [args]")
   .command(
@@ -37,7 +39,7 @@ require("yargs")
           describe: "the changelog",
         });
     },
-    function (argv) {
+    (argv) => {
       context.nextRelease = {
         version: argv.ver,
         notes: argv.notes,
@@ -51,7 +53,7 @@ require("yargs")
     "sync",
     "adds missing versions to the WHMCS Marketplace",
     () => {},
-    function () {
+    () => {
       syncVersions({}, context).then((r) => {
         console.log(r === false ? "Failed" : "Successful");
       });
@@ -67,7 +69,7 @@ require("yargs")
         describe: "the version to delete",
       });
     },
-    function (argv) {
+    (argv) => {
       context.version = argv.ver;
       delVersion({}, context).then((r) => {
         console.log(r === false ? "Failed" : "Successful");
@@ -78,7 +80,7 @@ require("yargs")
     "compatibility",
     "set the compatible WHMCS versions in the Marketplace",
     () => {},
-    function () {
+    () => {
       updateCompatibility({}, context).then((r) => {
         console.log(r === false ? "Failed" : "Successful");
       });
