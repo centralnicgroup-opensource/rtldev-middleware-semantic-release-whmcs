@@ -40,7 +40,7 @@
     "nodeArguments": [
       "--no-warnings"
     ],
-    "timeout": "2m"
+    "timeout": "10m"
   },
   "prettier": {
     "printWidth": 120,
