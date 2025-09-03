@@ -40,7 +40,7 @@
     "nodeArguments": [
       "--no-warnings"
     ],
-    "timeout": "10m"
+    "timeout": "5m"
   },
   "prettier": {
     "printWidth": 120,
@@ -77,7 +77,7 @@
     "ava": "6.4.1",
     "c8": "^10.0.0",
     "prettier": "^3.0.0",
-    "semantic-release": "^24.0.0",
+    "semantic-release": "^24.2.7",
     "semantic-release-teams-notify-plugin": "github:centralnicgroup-opensource/rtldev-middleware-semantic-release-notify-plugin",
     "stream-buffers": "^3.0.2"
   },
