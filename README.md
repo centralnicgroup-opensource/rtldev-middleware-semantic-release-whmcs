@@ -76,6 +76,7 @@ That said, before you can use this module for publishing new product/module vers
 | `PUPPETEER_HEADLESS` | **Optional.** Toggle headless mode on/off. by default true. Values: 1,0. |
 | `GH_TOKEN` | **Optional.** GitHub API authentication token to use for syncing versions. |
 | `GH_REPO` | **Optional.** GitHub repository name (format: organization/repository) to use for syncing versions. |
+| `useCookieExtension` | **Optional.** Use cookies extension when puppeteer is running to avoid cookie banner disruptions. |
 
 ### Options
 
