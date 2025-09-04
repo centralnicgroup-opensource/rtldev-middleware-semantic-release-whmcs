@@ -1,3 +1,10 @@
+## [5.1.3](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.1.2...v5.1.3) (2025-09-04)
+
+
+### Bug Fixes
+
+* **core:** implement timeout handling for publish operations and improve error handling in compatibility updates ([5fc8b34](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/5fc8b345a8412e0ec0bfa92922fe2939af84224a))
+
 ## [5.1.2](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.1.1...v5.1.2) (2025-09-01)
 
 
