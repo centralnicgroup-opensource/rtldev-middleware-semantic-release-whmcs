@@ -27,8 +27,7 @@ FYI: This module is ESM ready!
 ### Requirements
 
 * Installed nodejs/npm. We suggest using [nvm](https://github.com/creationix/nvm).
-* Installed browser and related OS software dependencies e.g. `sudo npx puppeteer browsers install chrome --install-deps`
-  It requires root privileges that's why it is sudo'ed. Check the puppeteer docs, for other browsers if you're interested.
+* Installed browser and related OS software dependencies e.g. `sudo npx puppeteer browsers install chrome --install-deps`. It requires root privileges that's why it is sudo'ed. Check the puppeteer docs, for other browsers if you're interested. Note: it may require `sudo apt-get update` first to work.
 * Using [semantic-release](https://github.com/semantic-release/semantic-release) in your CI/CD process
 
 ### Install
