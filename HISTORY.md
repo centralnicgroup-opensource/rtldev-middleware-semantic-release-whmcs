@@ -1,3 +1,10 @@
+## [5.1.18](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.1.17...v5.1.18) (2025-11-03)
+
+
+### Bug Fixes
+
+* **deps:** bump @octokit/rest from 22.0.0 to 22.0.1 ([d783238](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/d7832385264993257a8f85e976742f31f3d9fca3))
+
 ## [5.1.17](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.1.16...v5.1.17) (2025-10-29)
 
 
