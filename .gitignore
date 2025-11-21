@@ -1,4 +1,9 @@
+# npm / pnpm
 node_modules
+.pnpm-store
+package-lock.json
+# other files
+yarn.lock
 .nyc_output
 coverage
 .vscode
