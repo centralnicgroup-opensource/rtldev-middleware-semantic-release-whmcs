@@ -1,4 +1,5 @@
 import verifyWHMCS from "./lib/verify.js";
+import prepareWHMCS from "./lib/prepare.js";
 import publishWHMCS from "./lib/publish.js";
 import deleteVersion from "./lib/delete-marketplace-version.js";
 import setCompatibleVersions from "./lib/set-compatible-versions.js";
@@ -7,6 +8,15 @@ import marketplaceVersions from "./lib/scrape-marketplace-versions.js";
 
 let verified;
 let whmcsPublishResult = null;
+
+/**
+ * Called by semantic-release during the prepare step
+ * @param {*} pluginConfig The semantic-release plugin config
+ * @param {*} context The context provided by semantic-release
+ */
+async function prepare(pluginConfig, context) {
+  await prepareWHMCS(pluginConfig, context);
+}
 
 /**
  * Called by semantic-release during the verify step
@@ -144,6 +154,7 @@ async function fail(pluginConfig, context) {
 }
 
 export default {
+  prepare,
   verifyConditions,
   publish,
   //success,
