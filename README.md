@@ -11,6 +11,7 @@
 
 | Step | Description |
 | ---- | ----------- |
+| `prepare` | Install OS dependencies required by Puppeteer and Chromium/Chrome (Debian/Ubuntu only) if `osDepsCommand` is configured. |
 | `verifyConditions` | Verify the presence and the validity of the authentication credentials (set via [environment variables](#environment-variables)) and the product id option configuration. |
 | `publish` | Publish product/module version to [WHMCS Marketplace](https://marketplace.whmcs.com) including changelog notes. |
 
@@ -27,7 +28,7 @@ FYI: This module is ESM ready!
 ### Requirements
 
 * Installed nodejs/npm. We suggest using [nvm](https://github.com/creationix/nvm).
-* Installed browser and related OS software dependencies e.g. `sudo npx puppeteer browsers install chrome --install-deps`. It requires root privileges that's why it is sudo'ed. Check the puppeteer docs, for other browsers if you're interested. Note: it may require `sudo apt-get update` first to work.
+* **OS Dependencies**: On Debian/Ubuntu systems, the `prepare` step can run a custom command (e.g. `puppeteer browsers install chrome --install-deps`) to install required packages on demand. This is configured via `osDepsCommand`.
 * Using [semantic-release](https://github.com/semantic-release/semantic-release) in your CI/CD process
 
 ### Install
@@ -38,14 +39,27 @@ FYI: This module is ESM ready!
 
 ### Configuration
 
-The plugin can be loaded in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration). Currently no configuration options are available.
+The plugin can be loaded in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration). The `prepare` step handles OS dependencies if `osDepsCommand` is provided (requires `sudo` access on Debian/Ubuntu for system packages).
 
 ```json
 {
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@hexonet/semantic-release-whmcs"
+    [
+      "@hexonet/semantic-release-whmcs",
+      {
+        "osDepsCommand": [
+          "pnpm",
+          "dlx",
+          "puppeteer",
+          "browsers",
+          "install",
+          "chrome",
+          "--install-deps"
+        ]
+      }
+    ]
   ]
 }
 ```
@@ -81,7 +95,10 @@ That said, before you can use this module for publishing new product/module vers
 
 ### Options
 
-None available yet.
+| Option | Type | Description |
+| --- | --- | --- |
+| `skipOsDeps` | Boolean | **Optional.** Skip OS dependency installation in the prepare step. Default: `false`. Useful if you already have dependencies installed or prefer to manage them yourself. |
+| `osDepsCommand` | string[] | **Optional.** Command to install dependencies (e.g. `["pnpm", "dlx", "puppeteer", "browsers", "install", "chrome", "--install-deps"]`). <br><br> **Note:** The command is automatically executed with `sudo` and the current `PATH` preserved (via `/bin/bash -c "sudo env PATH=$PATH ..."`), so you do not need to add `sudo` yourself. |
 
 ### Routines
 
