@@ -1,3 +1,18 @@
+# [5.2.0](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.1.22...v5.2.0) (2026-01-07)
+
+
+### Bug Fixes
+
+* **deps:** bump puppeteer from 24.30.0 to 24.31.0 ([7d2ff8a](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/7d2ff8a2ead33c606f76e72303a92ed2fda05622))
+* **deps:** bump puppeteer from 24.31.0 to 24.33.0 ([e05fd23](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/e05fd2336697239e1766f0617e08c8c62fc83040))
+* **deps:** bump puppeteer from 24.33.0 to 24.33.1 ([cfbb3ad](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/cfbb3adb2310cbb04e9c4a48520e05f74cc996bf))
+* **deps:** bump puppeteer from 24.33.1 to 24.34.0 ([aff5059](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/aff5059079c0c95cec7c513c2d12a0a79dd45c03))
+
+
+### Features
+
+* **index.js:** add prepare step to install Chromium/Chrome OS dependencies for Puppeteer ([7e61220](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/7e61220646f4e3bcf68d300370a47668955b990b))
+
 ## [5.1.22](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.1.21...v5.1.22) (2025-11-13)
 
 
