@@ -1,3 +1,10 @@
+## [5.2.6](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.2.5...v5.2.6) (2026-02-03)
+
+
+### Bug Fixes
+
+* **deps:** bump tar from 7.5.2 to 7.5.7 ([a885d56](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/a885d56629c19ea5883531ad9727999f243285f3))
+
 ## [5.2.5](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.2.4...v5.2.5) (2026-01-28)
 
 
