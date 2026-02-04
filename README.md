@@ -11,7 +11,7 @@
 
 | Step | Description |
 | ---- | ----------- |
-| `prepare` | Install OS dependencies required by Puppeteer and Chromium/Chrome (Debian/Ubuntu only) if `osDepsCommand` is configured. |
+| `prepare` | Install OS dependencies required by Puppeteer and Chromium/Chrome (Debian/Ubuntu only). Can be customized via `osDepsCommand`. |
 | `verifyConditions` | Verify the presence and the validity of the authentication credentials (set via [environment variables](#environment-variables)) and the product id option configuration. |
 | `publish` | Publish product/module version to [WHMCS Marketplace](https://marketplace.whmcs.com) including changelog notes. |
 
@@ -28,7 +28,7 @@ FYI: This module is ESM ready!
 ### Requirements
 
 * Installed nodejs/npm. We suggest using [nvm](https://github.com/creationix/nvm).
-* **OS Dependencies**: On Debian/Ubuntu systems, the `prepare` step can run a custom command (e.g. `puppeteer browsers install chrome --install-deps`) to install required packages on demand. This is configured via `osDepsCommand`.
+* **OS Dependencies**: On Debian/Ubuntu systems, the `prepare` step installs Chrome (for testing) + required OS packages using `pnpm dlx puppeteer browsers install chrome --install-deps` (falls back to `npx` if `pnpm` is unavailable). You can override the command via `osDepsCommand`.
 * Using [semantic-release](https://github.com/semantic-release/semantic-release) in your CI/CD process
 
 ### Install
@@ -39,7 +39,7 @@ FYI: This module is ESM ready!
 
 ### Configuration
 
-The plugin can be loaded in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration). The `prepare` step handles OS dependencies if `osDepsCommand` is provided (requires `sudo` access on Debian/Ubuntu for system packages).
+The plugin can be loaded in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration). The `prepare` step handles OS dependencies on Debian/Ubuntu (requires `sudo` access for system packages).
 
 ```json
 {
@@ -92,6 +92,7 @@ That said, before you can use this module for publishing new product/module vers
 | `GH_TOKEN` | **Optional.** GitHub API authentication token to use for syncing versions. |
 | `GH_REPO` | **Optional.** GitHub repository name (format: organization/repository) to use for syncing versions. |
 | `useCookieExtension` | **Optional.** Use cookies extension when puppeteer is running to avoid cookie banner disruptions. |
+| `WHMCS_OS_DEPS_ALWAYS` | **Optional.** Force OS dependency installation in `prepare` even if there is no new release version. Useful for CI experiments. Values: `1` / `true`. |
 
 ### Options
 

@@ -68,7 +68,8 @@
   "overrides": {
     "http-cache-semantics": "^4.1.1",
     "word-wrap": "npm:@aashutoshrathi/word-wrap@1.2.6",
-    "glob-parent": "^5.1.2"
+    "glob-parent": "^5.1.2",
+    "node-tar": "^7.5.7"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",

@@ -82,25 +82,29 @@ test.serial("Prepare skips installation on non-Debian systems", async (t) => {
 });
 
 test.serial("Prepare continues when installer fails", async (t) => {
-  await withPrepare(t, [{ code: 0 }, { code: 0 }, { code: 1 }], async ({ prepare, spawnStub, context }) => {
+  await withPrepare(t, [{ code: 0 }, { code: 1 }], async ({ prepare, spawnStub, context }) => {
     await prepare({}, context);
-    t.is(spawnStub.calls.length, 3);
+    t.is(spawnStub.calls.length, 2);
     t.is(spawnStub.calls[0].command, "test");
     t.is(spawnStub.calls[1].command, "sudo");
-    t.deepEqual(spawnStub.calls[1].args, ["apt-get", "update"]);
-    t.is(spawnStub.calls[2].command, "sudo");
-    t.deepEqual(spawnStub.calls[2].args, ["apt-get", "install", "-y", "google-chrome-stable"]);
+    t.deepEqual(spawnStub.calls[1].args.slice(0, 2), ["env", `PATH=${process.env.PATH || ""}`]);
+    t.is(spawnStub.calls[1].args.includes("pnpm"), true);
+    t.is(spawnStub.calls[1].args.includes("dlx"), true);
+    t.is(spawnStub.calls[1].args.includes("puppeteer"), true);
+    t.is(spawnStub.calls[1].args.includes("--install-deps"), true);
   });
 });
 
 test.serial("Prepare installs dependencies on Debian systems", async (t) => {
-  await withPrepare(t, [{ code: 0 }, { code: 0 }, { code: 0 }], async ({ prepare, spawnStub, context }) => {
+  await withPrepare(t, [{ code: 0 }, { code: 0 }], async ({ prepare, spawnStub, context }) => {
     await prepare({}, context);
-    t.is(spawnStub.calls.length, 3);
+    t.is(spawnStub.calls.length, 2);
     t.is(spawnStub.calls[0].command, "test");
     t.is(spawnStub.calls[1].command, "sudo");
-    t.deepEqual(spawnStub.calls[1].args, ["apt-get", "update"]);
-    t.is(spawnStub.calls[2].command, "sudo");
-    t.deepEqual(spawnStub.calls[2].args, ["apt-get", "install", "-y", "google-chrome-stable"]);
+    t.deepEqual(spawnStub.calls[1].args.slice(0, 2), ["env", `PATH=${process.env.PATH || ""}`]);
+    t.is(spawnStub.calls[1].args.includes("pnpm"), true);
+    t.is(spawnStub.calls[1].args.includes("dlx"), true);
+    t.is(spawnStub.calls[1].args.includes("puppeteer"), true);
+    t.is(spawnStub.calls[1].args.includes("--install-deps"), true);
   });
 });

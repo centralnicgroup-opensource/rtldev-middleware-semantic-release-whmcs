@@ -1,3 +1,10 @@
+// Set Puppeteer cache dir early, before any puppeteer imports
+import path from "path";
+const workDir = process.env.PROJECT_WORKDIR || process.cwd();
+if (!process.env.PUPPETEER_CACHE_DIR) {
+  process.env.PUPPETEER_CACHE_DIR = path.join(workDir, ".cache", "puppeteer");
+}
+
 import verifyWHMCS from "./lib/verify.js";
 import prepareWHMCS from "./lib/prepare.js";
 import publishWHMCS from "./lib/publish.js";
