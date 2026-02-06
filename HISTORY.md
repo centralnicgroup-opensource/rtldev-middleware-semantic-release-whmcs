@@ -1,3 +1,10 @@
+## [5.2.8](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.2.7...v5.2.8) (2026-02-06)
+
+
+### Bug Fixes
+
+* **deps:** bump puppeteer from 24.37.0 to 24.37.1 ([b7ac931](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/b7ac9315d8515e6223e4ed01e9b0de2e257ab999))
+
 ## [5.2.7](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.2.6...v5.2.7) (2026-02-05)
 
 
