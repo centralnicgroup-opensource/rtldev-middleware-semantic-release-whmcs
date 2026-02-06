@@ -93,6 +93,7 @@ That said, before you can use this module for publishing new product/module vers
 | `GH_REPO` | **Optional.** GitHub repository name (format: organization/repository) to use for syncing versions. |
 | `useCookieExtension` | **Optional.** Use cookies extension when puppeteer is running to avoid cookie banner disruptions. |
 | `WHMCS_OS_DEPS_ALWAYS` | **Optional.** Force OS dependency installation in `prepare` even if there is no new release version. Useful for CI experiments. Values: `1` / `true`. |
+| `SKIP_OS_DEPS` | **Optional.** Skip OS dependency installation in `prepare`. Values: `1` / `true` (also supported: `skipOsDeps`). |
 
 ### Options
 
