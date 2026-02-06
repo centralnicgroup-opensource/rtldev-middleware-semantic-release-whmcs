@@ -1,3 +1,11 @@
+## [5.2.9](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.2.8...v5.2.9) (2026-02-06)
+
+
+### Bug Fixes
+
+* **prepare.js:** update OS dependency installation process for Puppeteer on Debian/Ubuntu ([f52c709](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/f52c709a8ec1d7eff02009e83afd9235083a0509))
+* **prepare/puppet:**  enhance prepare.js and puppet.js for improved configuration handling ([450b0e0](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/450b0e0a088afc45286c1cd6ed49b8d325d63c55))
+
 ## [5.2.8](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.2.7...v5.2.8) (2026-02-06)
 
 
