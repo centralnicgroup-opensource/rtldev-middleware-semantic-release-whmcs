@@ -33,7 +33,7 @@ async function withPrepare(t, sequence, assertions, options = {}) {
   } = await prepareModulePromise;
   const spawnStub = createSpawnStub(sequence);
   __setSpawnImplementation(spawnStub);
-  const context = { logger: t.context.logger };
+  const context = { logger: t.context.logger, env: {} };
   try {
     const constants = { debianMarker: DEBIAN_MARKER };
     await assertions({ prepare, spawnStub, context, pluginConfig: options.pluginConfig || {}, constants });

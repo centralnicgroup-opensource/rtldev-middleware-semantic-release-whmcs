@@ -9,5 +9,6 @@ coverage
 .vscode
 .idea
 .DS_Store
+.env
 
 extensions/**/_metadata/**/*
