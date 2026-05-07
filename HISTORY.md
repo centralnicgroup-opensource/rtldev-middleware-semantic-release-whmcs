@@ -1,3 +1,10 @@
+## [5.2.13](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.2.12...v5.2.13) (2026-05-07)
+
+
+### Bug Fixes
+
+* **deps:** bump ip-address from 10.1.0 to 10.2.0 ([8cec58c](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/commit/8cec58c02899c63893963b19761eb9e2d9b253dd))
+
 ## [5.2.12](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-whmcs/compare/v5.2.11...v5.2.12) (2026-02-20)
 
 
