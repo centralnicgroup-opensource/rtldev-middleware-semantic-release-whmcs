@@ -1,2 +1,5 @@
-onlyBuiltDependencies:
-  - puppeteer
+allowBuilds:
+  puppeteer: true
+minimumReleaseAgeExclude:
+  - '@team-internet/semantic-release-plugins@1.0.6'
+  - 'prettier@3.8.5'
