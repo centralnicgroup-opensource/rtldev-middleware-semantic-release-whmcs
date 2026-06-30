@@ -50,7 +50,7 @@ importers:
         version: 17.4.2
       prettier:
         specifier: ^3.8.5
-        version: 3.9.1
+        version: 3.9.4
       semantic-release:
         specifier: ^25.0.5
         version: 25.0.5
@@ -1456,8 +1456,8 @@ packages:
     resolution: {integrity: sha512-Y9wXQivjRX0REtwpA9+n0bYYypWESn3cWtW2vazymw711qn+AQXxzZjRqhANYGBLIMC1UzVdpwe/1hHQwHfwng==}
     engines: {node: '>=20'}
 
-  prettier@3.9.1:
-    resolution: {integrity: sha512-ppiDo2CSwexck1eyZUwJHg/N3nf1+6IRCv7W/VJ5vaLnVCmB7+3CdRfMwoCHBBX6xTrREDTksZ4OZl5SSf4zXA==}
+  prettier@3.9.4:
+    resolution: {integrity: sha512-yWG/o/4oJfo036EKAfK6ACAoDOfHeRHx4tuxkfBZiauURiaSmYwlpOr5LQqKtIkRD2z1PLteme2WoxEnj4tHTg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3257,7 +3257,7 @@ snapshots:
     dependencies:
       irregular-plurals: 4.2.0
 
-  prettier@3.9.1: {}
+  prettier@3.9.4: {}
 
   pretty-ms@9.3.0:
     dependencies:
